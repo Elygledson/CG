@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1643582475 source:c:\users\deuse\onedrive\Área de trabalho\soccer\main.cpp
+1643667924 source:c:\users\deuse\onedrive\Área de trabalho\soccer\main.cpp
 	<windows.h>
 	<gl/glut.h>
 	<stdlib.h>

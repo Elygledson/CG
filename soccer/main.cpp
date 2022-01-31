@@ -6,93 +6,109 @@
 
 
 
-void pitch()
+void goalpost()
 {
-    int i;
-	float theta;
-   gluLookAt(0,10, -9, 0, 0, 1, 0, 1, 0);
-   glEnable(GL_POLYGON_OFFSET_FILL);
-   glPolygonOffset( 1.0, 1.0 );
-   //Adding pitch of soccer
-   glBegin(GL_QUADS);
-     glColor3ub(0,129,0);
-      glVertex3f(-10,0,10);
-      glVertex3f(10,0,10);
-      glVertex3f(10,0,-10);
-      glVertex3f(-10,0,-10);
-   glEnd();
-
-   glBegin(GL_LINES);
-     glColor3ub(255,255,255);
-     glVertex3f(-10.1,0,0);
-     glVertex3f(10.1,0,0);
-   glEnd();
-
-   //First goalpost
-   glBegin(GL_LINES);
-     glColor3ub(255,255,255);
-     glVertex3f(-2.5,0,8.6);
-     glVertex3f(2.5,0,8.6);
-
-     glVertex3f(-5,0,7.8);
-     glVertex3f(5,0,7.8);
-
-   glEnd();
-
-   glBegin(GL_LINES);
-     glVertex3f(-2.5,0,10);
-     glVertex3f(-2.5,0,8.6);
-     glVertex3f(2.5,0,10);
-     glVertex3f(2.5,0,8.6);
-
-     glVertex3f(-5,0,10);
-     glVertex3f(-5,0,7.8);
-
-      glVertex3f(5,0,10);
-      glVertex3f(5,0,7.8);
-   glEnd();
-   //end
-
-   //Second goalpost
-    glBegin(GL_LINES);
-     glColor3ub(255,255,255);
-     glVertex3f(-2.5,0,-8.6);
-     glVertex3f(2.5,0,-8.6);
-
-     glVertex3f(-5,0,-7.8);
-     glVertex3f(5,0,-7.8);
+    glColor3f(255,255,255);
+    glBegin(GL_LINE_LOOP);
+     glLineWidth(4);
+     glVertex3f(-1.5,0.0,-15);
+     glVertex3f(1.5,0.0,-15);
+     glVertex3f(1.5,2.0,-13);
+     glVertex3f(-1.5,2.0,-13);
     glEnd();
 
-     glBegin(GL_LINES);
-     glVertex3f(-2.5,0,-10);
-     glVertex3f(-2.5,0,-8.6);
-     glVertex3f(2.5,0,-10);
-     glVertex3f(2.5,0,-8.6);
-
-     glVertex3f(-5,0,-10);
-     glVertex3f(-5,0,-7.8);
-
-      glVertex3f(5,0,-10);
-      glVertex3f(5,0,-7.8);
-   glEnd();
-   //end
-
-   ////Adding a big circle at middle
+    glColor3f(255,255,255);
+    glBegin(GL_LINE_LOOP);
+     glLineWidth(4);
+     glVertex3f(-1.5,0.0,15);
+     glVertex3f(1.5,0.0,15);
+     glVertex3f(1.5,2.0,13);
+     glVertex3f(-1.5,2.0,13);
+    glEnd();
+}
+void circle()
+{
+    ////Adding a big circle at middle
+    int i;
+	float theta;
     glBegin(GL_LINE_LOOP);
     glColor3ub(255,255,255);
        for(int i=0;i<360;i++)
        {
            theta=i*(3.1416/180);
-           glVertex3f(2*cos(theta),2*sin(theta),0.0);
+           glVertex3f(2*cos(theta),2*sin(theta),0);
        }
     glEnd();
+}
+
+void ball()
+{
     //Adding ball
     glPushMatrix();
       glColor3ub(255,255,255);
       glTranslated(0,0.2,0);
       glutSolidSphere(0.40, 100, 100);
     glPopMatrix();
+}
 
+void pitch()
+{
+   gluLookAt(5,10, 0, 1, 0, 0, 0, 1, 0);
+   glEnable(GL_POLYGON_OFFSET_FILL);
+   glPolygonOffset( 1.0, 1.0 );
+   //Adding pitch of soccer
+   glLineWidth(3);
+   glBegin(GL_QUADS);
+     glColor3ub(0,129,0);
+      glVertex3f(-7,0,15);
+      glVertex3f(7,0,15);
+      glVertex3f(7,0,-15);
+      glVertex3f(-7,0,-15);
+   glEnd();
+
+   //Line at middle
+   glBegin(GL_LINES);
+     glColor3ub(255,255,255);
+     glVertex3f(-7,0,0);
+     glVertex3f(7,0,0);
+   glEnd();
+
+   glBegin(GL_LINE_LOOP);
+     glColor3ub(255,255,255);
+     glVertex3f(-2.3,0,12.5);
+     glVertex3f(2.3,0,12.5);
+     glVertex3f(2.3,0,15);
+     glVertex3f(-2.3,0,15);
+   glEnd();
+
+   glBegin(GL_LINE_LOOP);
+     glColor3ub(255,255,255);
+     glVertex3f(-3.5,0,10.5);
+     glVertex3f(3.5,0,10.5);
+     glVertex3f(3.5,0,15);
+     glVertex3f(-3.5,0,15);
+   glEnd();
+
+    glBegin(GL_LINE_LOOP);
+     glColor3ub(255,255,255);
+     glVertex3f(-2.3,0,-12.5);
+     glVertex3f(2.3,0,-12.5);
+     glVertex3f(2.3,0,-15);
+     glVertex3f(-2.3,0,-15);
+   glEnd();
+
+   glBegin(GL_LINE_LOOP);
+     glColor3ub(255,255,255);
+     glVertex3f(-3.5,0,-10.5);
+     glVertex3f(3.5,0,-10.5);
+     glVertex3f(3.5,0,-15);
+     glVertex3f(-3.5,0,-15);
+   glEnd();
+
+   glBegin(GL_POINTS);
+    glVertex3f(0,0,11.5);
+    glVertex3f(0,0,-11.5);
+   glEnd();
 
 }
 
@@ -101,6 +117,9 @@ void display()
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glPushMatrix();
     pitch();
+     ball();
+     circle();
+     goalpost();
   glPopMatrix();
 
   glutSwapBuffers();
