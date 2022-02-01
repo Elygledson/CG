@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1643667924 source:c:\users\deuse\onedrive\Área de trabalho\soccer\main.cpp
+1643753196 source:c:\users\deuse\onedrive\Área de trabalho\soccer\main.cpp
 	<windows.h>
 	<gl/glut.h>
 	<stdlib.h>
 	<math.h>
+	<iostream>
+	<string>
 
 1301111162 d:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -222,4 +224,21 @@
 
 1341006774 d:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
+
+1341006776 d:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1341006780 d:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1643753542 source:c:\users\deuse\cg\soccer\main.cpp
+	<windows.h>
+	<gl/glut.h>
+	<stdlib.h>
+	<math.h>
+	<string>
 
