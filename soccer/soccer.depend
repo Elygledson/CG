@@ -235,12 +235,13 @@
 	<_mingw.h>
 	<stddef.h>
 
-1643753542 source:c:\users\deuse\cg\soccer\main.cpp
+1643839984 source:c:\users\deuse\cg\soccer\main.cpp
 	<windows.h>
 	<gl/glut.h>
+	<stdio.h>
 	<stdlib.h>
-	<math.h>
 	<string>
+	<math.h>
 
 1643820019 source:c:\users\suporte\downloads\cg-main\soccer\main.cpp
 	<windows.h>
@@ -250,7 +251,7 @@
 	<string>
 	<math.h>
 
-1643838186 source:i:\soccer\main.cpp
+1643839172 source:i:\soccer\main.cpp
 	<windows.h>
 	<gl/glut.h>
 	<stdio.h>

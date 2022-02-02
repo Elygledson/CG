@@ -15,10 +15,10 @@ float zmove[]{ 0, 0 };
 
 void gameScore(char *String)
 {
-    sprintf(txt,"FLA %d X %d VAS",homeTeam,awayTeam);
+    sprintf(txt,"FLA %d X %d VAS 1T 00:00",homeTeam,awayTeam);
 
   	glPushMatrix();
-        glRasterPos3f(0,8.3,1.6);
+        glRasterPos3f(0,9.3,2);
         while(*String)
              glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,*String++);
 	glPopMatrix();
@@ -158,6 +158,39 @@ void players()
    glPopMatrix();
   //end
 
+  //player 6
+   glColor3ub(255,0,0);
+   glPushMatrix();
+     glTranslatef(0.0, 0.0, 3.5);
+     glScalef(0.7,1.0,0.5);
+     glutSolidCube(1.0);
+   glPopMatrix();
+
+    //header
+   glPushMatrix();
+     glColor3ub(255, 205, 153);
+     glTranslatef(0.0, 1.0, 3.5);
+     glutSolidSphere(0.40,100,100);
+   glPopMatrix();
+  //end
+
+  //Manager
+   glColor3ub(255,0,0);
+   glPushMatrix();
+     glTranslatef(8.0, 0.0, 4.0);
+     glScalef(0.7,1.0,0.5);
+     glutSolidCube(1.0);
+   glPopMatrix();
+
+    //header
+   glPushMatrix();
+     glColor3ub(255, 205, 153);
+     glTranslatef(8.0, 1.0, 4.0);
+     glutSolidSphere(0.40,100,100);
+   glPopMatrix();
+  //end
+
+
   //Away team
   //player 1
    glColor3ub(255,255,255);
@@ -236,6 +269,38 @@ void players()
    glPushMatrix();
      glColor3ub(255, 205, 153);
      glTranslatef(-4.3, 1.0, -4.0);
+     glutSolidSphere(0.40,100,100);
+   glPopMatrix();
+  //end
+
+  //player 6
+   glColor3ub(255,255,255);
+   glPushMatrix();
+     glTranslatef(0.0, 0.0, -1);
+     glScalef(0.7,1.0,0.5);
+     glutSolidCube(1.0);
+   glPopMatrix();
+
+    //header
+   glPushMatrix();
+     glColor3ub(255, 205, 153);
+     glTranslatef(0.0, 1.0, -1);
+     glutSolidSphere(0.40,100,100);
+   glPopMatrix();
+  //end
+
+   //Manager
+   glColor3ub(255,255,255);
+   glPushMatrix();
+     glTranslatef(8.0, 0.0, -4.0);
+     glScalef(0.7,1.0,0.5);
+     glutSolidCube(1.0);
+   glPopMatrix();
+
+    //header
+   glPushMatrix();
+     glColor3ub(255, 205, 153);
+     glTranslatef(8.0, 1.0, -4.0);
      glutSolidSphere(0.40,100,100);
    glPopMatrix();
   //end
@@ -443,7 +508,7 @@ void keyboard(int button, int x, int y)
 int main(int argc, char **argv)
 {
   glutInit(&argc, argv);
-  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_SINGLE );
+  glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(1000, 500);
   glutInitWindowPosition(150, 150);
   glutCreateWindow("Soccer project");
