@@ -86,6 +86,20 @@ void players()
       glScalef(0.7,1.0,0.5);
       glutSolidCube(1.0);
   glPopMatrix();
+
+  //player arms
+  glColor3ub(0,0,0);
+  glLineWidth(5);
+  glBegin(GL_LINES);
+    glVertex3f(1.0,0.2,12.7);
+    glVertex3f(0.3,0.7,12.7);
+  glEnd();
+
+   glBegin(GL_LINES);
+    glVertex3f(-1.0,0.2,12.7);
+    glVertex3f(-0.3,0.7,12.7);
+  glEnd();
+
   //header
   glPushMatrix();
       glColor3ub(255, 205, 153);
@@ -101,6 +115,14 @@ void players()
      glScalef(0.7,1.0,0.5);
      glutSolidCube(1.0);
   glPopMatrix();
+
+  //player arms
+  glColor3ub(255,0,0);
+  glBegin(GL_LINES);
+    glVertex3f(-2.5,0.5,9.0);
+    glVertex3f(-0.5,0.5,9.0);
+  glEnd();
+
 
   //header
    glPushMatrix();
@@ -118,6 +140,14 @@ void players()
      glutSolidCube(1.0);
   glPopMatrix();
 
+  //player arms
+  glColor3ub(255,0,0);
+  glBegin(GL_LINES);
+    glVertex3f(3.5,0.5,9.0);
+    glVertex3f(1.5,0.5,9.0);
+  glEnd();
+
+
    //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -133,6 +163,13 @@ void players()
      glScalef(0.7,1.0,0.5);
      glutSolidCube(1.0);
   glPopMatrix();
+
+  //player arms
+  glColor3ub(255,0,0);
+  glBegin(GL_LINES);
+    glVertex3f(3.3,0.5,4.0);
+    glVertex3f(5.3,0.5,4.0);
+  glEnd();
 
    //header
    glPushMatrix();
@@ -150,6 +187,13 @@ void players()
      glutSolidCube(1.0);
   glPopMatrix();
 
+  //player arms
+  glColor3ub(255,0,0);
+  glBegin(GL_LINES);
+    glVertex3f(-5.3,0.5,4.0);
+    glVertex3f(-3.3,0.5,4.0);
+  glEnd();
+
    //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -165,6 +209,14 @@ void players()
      glScalef(0.7,1.0,0.5);
      glutSolidCube(1.0);
    glPopMatrix();
+
+   //player arms
+  glColor3ub(255,0,0);
+  glBegin(GL_LINES);
+    glVertex3f(-1.2,0.5,3.5);
+    glVertex3f(1.2,0.5,3.5);
+  glEnd();
+
 
     //header
    glPushMatrix();
@@ -200,6 +252,19 @@ void players()
       glutSolidCube(1.0);
   glPopMatrix();
 
+  //player arms
+  glColor3ub(0,0,0);
+  glLineWidth(5);
+  glBegin(GL_LINES);
+    glVertex3f(1.0,0.2,-12.7);
+    glVertex3f(0.3,0.7,-12.7);
+  glEnd();
+
+   glBegin(GL_LINES);
+    glVertex3f(-1.0,0.2,-12.7);
+    glVertex3f(-0.3,0.7,-12.7);
+  glEnd();
+
    //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -216,6 +281,13 @@ void players()
      glutSolidCube(1.0);
   glPopMatrix();
 
+  //player arms
+  glColor3ub(255,255,255);
+  glBegin(GL_LINES);
+    glVertex3f(-2.5,0.5,-9.0);
+    glVertex3f(-0.5,0.5,-9.0);
+  glEnd();
+
    //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -231,6 +303,14 @@ void players()
      glScalef(0.7,1.0,0.5);
      glutSolidCube(1.0);
   glPopMatrix();
+
+   //player arms
+  glColor3ub(255,255,255);
+  glBegin(GL_LINES);
+    glVertex3f(3.5,0.5,-9.0);
+    glVertex3f(1.5,0.5,-9.0);
+  glEnd();
+
 
    //header
    glPushMatrix();
@@ -249,6 +329,13 @@ void players()
      glutSolidCube(1.0);
   glPopMatrix();
 
+  //player arms
+  glColor3ub(255,255,255);
+  glBegin(GL_LINES);
+    glVertex3f(3.3,0.5,-4.0);
+    glVertex3f(5.3,0.5,-4.0);
+  glEnd();
+
    //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -265,6 +352,14 @@ void players()
      glutSolidCube(1.0);
    glPopMatrix();
 
+     //player arms
+  glColor3ub(255,255,255);
+  glBegin(GL_LINES);
+    glVertex3f(-5.3,0.5,-4.0);
+    glVertex3f(-3.3,0.5,-4.0);
+  glEnd();
+
+
     //header
    glPushMatrix();
      glColor3ub(255, 205, 153);
@@ -280,6 +375,14 @@ void players()
      glScalef(0.7,1.0,0.5);
      glutSolidCube(1.0);
    glPopMatrix();
+
+     //player arms
+      glColor3ub(255,255,255);
+      glBegin(GL_LINES);
+        glVertex3f(-1.2,0.5,-1);
+        glVertex3f(1.2,0.5,-1);
+      glEnd();
+
 
     //header
    glPushMatrix();
@@ -316,7 +419,7 @@ void circle()
        for(int i=0;i < 360;i++)
        {
            theta=i*(3.1416/180);
-           glVertex3f(0.3,2.6*sin(theta),2.6*cos(theta));
+           glVertex3f(0.6,3.5*sin(theta),3.5*cos(theta));
        }
     glEnd();
     //Adding central mark
@@ -334,6 +437,7 @@ void ball()
     //Adding ball
     glPushMatrix();
       glColor3ub(255,255,255);
+      glRotatef(1.5,1,0,0);
       glTranslatef(xmove[0], ymove[0], zmove[0]);
       glutSolidSphere(0.40, 100, 100);
     glPopMatrix();
@@ -369,10 +473,10 @@ void pitch()
    glLineWidth(2.4);
    glColor3ub(0,129,0);
    glBegin(GL_QUADS);
-      glVertex3f(-7,0,15);
-      glVertex3f(7,0,15);
-      glVertex3f(7,0,-15);
-      glVertex3f(-7,0,-15);
+      glVertex3f(-9,0,17);
+      glVertex3f(9,0,17);
+      glVertex3f(9,0,-17);
+      glVertex3f(-9,0,-17);
    glEnd();
 
   //Hollow square
@@ -450,20 +554,6 @@ void pitch()
     glVertex3f(0,0,-11.5);
    glEnd();
    //end
-
- // stands
-   glColor3ub(176,196,222);
-  glPushMatrix();
-      glTranslatef(0.0, 0.0, 25.0);
-      glScalef(7.0, 2.0, 0.0);
-      glutSolidCube(2.0);
-  glPopMatrix();
-
-  glPushMatrix();
-      glTranslatef(0.0, 0.0, -25.0);
-      glScalef(7.0, 2.0, 0.0);
-      glutSolidCube(2.0);
-  glPopMatrix();
 }
 
 void display()
